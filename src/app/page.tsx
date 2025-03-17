@@ -17,7 +17,7 @@ export default function Home() {
     router.push('/question')
   }
 
-  return (
+  return ( 
     <>
       <div className={styles.main_wrap}>
         <p className={styles.sub_title}>나와 어울리는 영화 캐릭터는 누구일까??</p>

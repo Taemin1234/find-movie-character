@@ -1,6 +1,5 @@
 import Button from "../components/button";
-import {Question} from '@/types'
-
+import { Question } from '@/types'
 
 interface QuestionBoxProps {
     questionData: Question;
@@ -12,9 +11,9 @@ export default function QuestionBox({ questionData, onAnswerClick }: QuestionBox
         <div>
             <p>{questionData.question}</p>
             <div key={questionData.id}>
-            {questionData.answers.map((ans) => {
-                <Button content={ans.text} onClick={() => onAnswerClick(ans.text)} />
-            })}
+                {questionData.answers.map((ans, i) => (
+                    <Button key={i} content={ans.text} onClick={() => onAnswerClick(ans.value)} />
+                ))}
             </div>
         </div>
     );
