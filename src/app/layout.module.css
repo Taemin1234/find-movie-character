@@ -1,0 +1,19 @@
+.header {
+    padding: 10px 20px;
+    background-color: #f7f8fa;
+    text-align: center;
+}
+.header p {
+    font-size: 28px;
+    font-weight: 700;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f8fa;
+    text-align: center;
+}

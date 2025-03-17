@@ -1,0 +1,17 @@
+.btn {
+    font-size: 18px;
+    padding: 1em 2.7em;
+    margin-top: 20px;
+    font-weight: 500;
+    background-color: #1f2937;
+    color: #fff;
+    border: none;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
+.btn.btn-answer {
+    color: #1f2937;
+    background-color: #fff;
+    border: solid 1px #1f2937;
+}
