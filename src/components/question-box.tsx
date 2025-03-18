@@ -1,3 +1,4 @@
+import styles from './question-box.module.css'
 import Button from "../components/button";
 import { Question } from '@/types'
 
@@ -8,11 +9,11 @@ interface QuestionBoxProps {
 
 export default function QuestionBox({ questionData, onAnswerClick }: QuestionBoxProps) {
     return (
-        <div>
+        <div className={styles.question_box_wrap}>
             <p>{questionData.question}</p>
             <div key={questionData.id}>
-                {questionData.answers.map((ans, i) => (
-                    <Button key={i} content={ans.text} onClick={() => onAnswerClick(ans.value)} />
+                {questionData.answers.map((ans) => (
+                    <Button key={ans.value} content={ans.text} onClick={() => onAnswerClick(ans.value)} />
                 ))}
             </div>
         </div>

@@ -9,25 +9,62 @@ import { Question } from '@/types'
 export default function QuestionPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [answers, setAnswers] = useState<string[]>([]);
   const router = useRouter();
 
   useEffect(() => {
-    fetch("/data/question.json")
-      .then((res) => res.json())
-      .then((data) => setQuestions(data))
-      .catch((error) => console.error("Error fetching JSON:", error));
+    const fetchQuestions = async () => {
+      try {
+        const response = await fetch("/data/question.json");
+        if (!response.ok) throw new Error("Failed to fetch questions");
+        const data = await response.json();
+        setQuestions(data);
+      } catch (error) {
+        console.error("Error fetching JSON:", error);
+        setQuestions([]); // 기본 빈 배열을 설정하여 앱이 깨지지 않도록 처리
+      }
+    };
+  
+    fetchQuestions();
   }, []);
 
   const handleAnswer = (answer: string) => {
-    setQuestions((prev) => [...prev, answer]);
+    setAnswers((prev) => [...prev, answer]);
 
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      router.push("/result");
+      const resMbti = generateType(answers)
+      router.push(`/result?res=${encodeURIComponent(resMbti)}`);
     }
   };
 
+  const generateType = (answers : string[]) => {
+      // 주어진 차원(예: ['E','I'])에 해당하는 답변들의 개수를 계산하고, 다수결로 최종 결과를 도출하는 함수
+      const getDimensionResult = (dimensionLetters: string[]) => {
+        // dimensionLetters: 예를 들어 ['E', 'I']
+        const counts = { [dimensionLetters[0]]: 0, [dimensionLetters[1]]: 0 };
+
+        // 배열 전체에서 해당 차원에 속하는 글자만 카운트
+        answers.forEach(letter => {
+          if (counts.hasOwnProperty(letter)) {
+            counts[letter]++;
+          }
+        });
+
+        // 만약 동점일 경우 기본값으로 첫 번째 글자를 선택하도록 함
+        return counts[dimensionLetters[0]] >= counts[dimensionLetters[1]] ? dimensionLetters[0] : dimensionLetters[1];
+      };
+
+      // 각 차원별 최종 결과 산출
+      const finalEI = getDimensionResult(['E', 'I']);
+      const finalSN = getDimensionResult(['S', 'N']);
+      const finalTF = getDimensionResult(['T', 'F']);
+      const finalJP = getDimensionResult(['J', 'P']);
+
+      // 최종 MBTI 결과
+      return finalEI + finalSN + finalTF + finalJP;
+  }
 
   return (
     <div>
