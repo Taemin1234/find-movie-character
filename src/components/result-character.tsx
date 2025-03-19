@@ -1,13 +1,13 @@
 import { DataProps } from '@/types'
 import MainCharacter from './main-character';
 
-export default function ResultCharacter({result}:DataProps) {
+export default function ResultCharacter({ result }: DataProps) {
     return (
         <div>
-            <MainCharacter result={result} width={150} height={150} showMainDes={true}/>
+            <MainCharacter result={result} width={200} height={300} showMainDes={true} />
             <div>
                 <ul>
-                    {result.characters.map((el,i) => {
+                    {result.characters.map((el, i) => {
                         return (
                             <li key={i}>
                                 <p>{el.name}</p>
@@ -32,7 +32,7 @@ export default function ResultCharacter({result}:DataProps) {
             </div>
             <div>
                 <p>키워드</p>
-                {result.representative.keywords.map((el,i) => {
+                {result.representative.keywords.map((el, i) => {
                     return (
                         <span key={i}>{el}</span>
                     )
