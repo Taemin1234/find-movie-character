@@ -1,32 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useFetchQuestion } from "@/hooks/useFetchQuestion"
 import QuestionBox from "@/components/question-box";
-import { Question } from '@/types'
+
 
 
 export default function QuestionPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<string[]>([]);
   const router = useRouter();
-
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        const response = await fetch("/data/question.json");
-        if (!response.ok) throw new Error("Failed to fetch questions");
-        const data = await response.json();
-        setQuestions(data);
-      } catch (error) {
-        console.error("Error fetching JSON:", error);
-        setQuestions([]); // 기본 빈 배열을 설정하여 앱이 깨지지 않도록 처리
-      }
-    };
+  const questions = useFetchQuestion()
   
-    fetchQuestions();
-  }, []);
 
   const handleAnswer = (answer: string) => {
     setAnswers((prev) => [...prev, answer]);
