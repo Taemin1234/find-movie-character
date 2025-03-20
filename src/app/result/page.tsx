@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams, useRouter } from "next/navigation"
-
+import styles from './page.module.css'
 import { useFetchResult } from "@/hooks/useFetchResult"
 import ResultCharacter from '@/components/result-character'
 import RelateCharacter from '@/components/relate-character'
@@ -24,10 +24,10 @@ export default function Result() {
     }
 
     return (
-        <div>
-            <ResultCharacter result = {result} />
-            <RelateCharacter result = {result} />
-            <Button content={'다시 하기'} onClick={backMain}/>
+        <div className={styles.result}>
+            <ResultCharacter result={result} />
+            <RelateCharacter result={result} />
+            <Button content={'다시 하기'} onClick={backMain} />
         </div>
     )
 } 

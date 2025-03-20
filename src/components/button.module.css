@@ -10,8 +10,16 @@
     border-radius: 0.6em;
     cursor: pointer;
 }
+
 .btn.btn-answer {
+    width: 100%;
     color: #1f2937;
     background-color: #fff;
     border: solid 1px #1f2937;
+    margin-top: 0;
+    word-break: keep-all;
+}
+
+.btn.btn-answer+.btn.btn-answer {
+    margin-top: 20px;
 }

@@ -1,9 +1,16 @@
 .main_wrap {
-    margin-top: 20px;
+    margin-top: 40px;
 }
+
+.main_wrap+button {
+    margin-top: 50px;
+}
+
 .sub_title {
-    font-size: 18px;
+    font-size: 24px;
+    word-break: keep-all
 }
+
 .main_img {
-    margin-top: 25px;
+    margin-top: 40px;
 }

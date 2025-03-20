@@ -10,10 +10,10 @@ interface QuestionBoxProps {
 export default function QuestionBox({ questionData, onAnswerClick }: QuestionBoxProps) {
     return (
         <div className={styles.question_box_wrap}>
-            <p>{questionData.question}</p>
-            <div key={questionData.id}>
+            <p className={styles.question}>{questionData.question}</p>
+            <div key={questionData.id} className={styles.answer_wrap}>
                 {questionData.answers.map((ans) => (
-                    <Button key={ans.value} content={ans.text} onClick={() => onAnswerClick(ans.value)} />
+                    <Button key={ans.value} content={ans.text} type={'btn-answer'} onClick={() => onAnswerClick(ans.value)} />
                 ))}
             </div>
         </div>

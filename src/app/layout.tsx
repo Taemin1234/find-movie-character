@@ -15,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <header className={styles.header}>
-          <p>🎞️나와 맞는 영화 캐릭터</p>
-        </header>
-        <main className={styles.container}>{children}</main>
+        <div className={styles.container}>
+          <header className={styles.header}>
+            <p>🎞️나와 맞는 영화 캐릭터</p>
+          </header>
+          <main className={styles.main}>{children}</main>
+        </div>
       </body>
     </html>
   );
