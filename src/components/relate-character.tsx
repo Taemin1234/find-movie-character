@@ -11,21 +11,19 @@ export default function ResultCharacter({ result }: DataProps) {
     const incompatible = resultArr[result.incompatible]
     const compatible = resultArr[result.compatible]
 
-
-    // console.log(resultArr)
-    console.log(incompatible)
-
-    //MainCharacter에 전달하는데이터가 타입이 맞는지 옳은지 확인
+    if (!incompatible || !compatible) {
+        return <p>로딩중 입니다</p>;
+    }
 
     return (
         <div>
             <div>
                 <p>잘 맞는 캐릭터</p>
-                {/* <MainCharacter result={compatible} width={150} height={150} showMainDes={false}/> */}
+                <MainCharacter result={compatible} width={69} height={100} showMainDes={false}/>
             </div>
             <div>
                 <p>상극인 캐릭터</p>
-                {/* <MainCharacter result={incompatible} width={150} height={150} showMainDes={false}/> */}
+                <MainCharacter result={incompatible} width={69} height={100} showMainDes={false}/>
             </div>
         </div>
     )

@@ -1,0 +1,37 @@
+.result_character_wrap > div:not(:first-child) {
+    margin-top: 20px;
+}
+.des_character .des_list li:not(:first-child) {
+    margin-top: 10px;
+}
+.des_character .txt_bul1 {
+    text-align: left;
+}
+.des_character .txt_bul1 li:not(:first-child) {
+    margin-top: 10px;
+    
+}
+.des_character .txt_bul1 li {
+    position: relative;
+    padding-left: 10px;
+}
+.des_character .txt_bul1 li:before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 3px;
+    background-color: #0f0f0f;
+    left: 0;
+    top: 10px;
+}
+.other_character .title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'gmarket';
+}
+.other_character ul {
+    margin-top: 15px;
+}
+.other_character ul li:not(:first-child) {
+    margin-top: 5px;
+}

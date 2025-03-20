@@ -1,0 +1,28 @@
+.character_info_wrap {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.character_info_title {
+
+}
+.character_info_title p {
+    text-align: center;
+}
+.character_info_title .name {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'gmarket';
+}
+.character_info_title .movie {
+    font-size: 15px;
+    margin-top: 5px;
+}
+.character_info_wrap .des {
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: rgb(147, 212, 255);
+    padding: 10px;
+}
