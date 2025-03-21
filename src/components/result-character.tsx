@@ -25,13 +25,15 @@ export default function ResultCharacter({ result }: DataProps) {
                     })}
                 </ul>
             </div>
-            <div>
+            <div className={styles.keyword}>
                 <p>키워드</p>
-                {result.representative.keywords.map((el, i) => {
-                    return (
-                        <span key={i}>{el}</span>
-                    )
-                })}
+                <div className={styles.keyword_wrap}>
+                    {result.representative.keywords.map((el, i) => {
+                        return (
+                            <span key={i} className={styles.keyword_el}>{el}</span>
+                        )
+                    })}
+                </div>
             </div>
             <div className={styles.other_character}>
                 <p className={styles.title}>다른 캐릭터는?</p>

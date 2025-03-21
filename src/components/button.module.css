@@ -1,6 +1,6 @@
 .btn {
     font-size: 18px;
-    padding: 1em 2.7em;
+    padding: 18px 48px;
     margin-top: 20px;
     font-weight: 500;
     background-color: #1f2937;
@@ -13,6 +13,8 @@
 
 .btn.btn-answer {
     width: 100%;
+    min-height: 70px;
+    padding: 10px 30px;
     color: #1f2937;
     background-color: #fff;
     border: solid 1px #1f2937;

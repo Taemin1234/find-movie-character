@@ -1,9 +1,9 @@
 .main_wrap {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .main_wrap+button {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .sub_title {
@@ -12,5 +12,5 @@
 }
 
 .main_img {
-    margin-top: 40px;
+    margin-top: 30px;
 }
