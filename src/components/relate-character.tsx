@@ -1,6 +1,7 @@
 import {  DataProps } from '@/types'
 import { useFetchResult } from "@/hooks/useFetchResult"
 import MainCharacter from './main-character';
+import styles from './relate-character.module.css'
 
 export default function ResultCharacter({ result }: DataProps) {
     const resultArr = useFetchResult();
@@ -16,14 +17,14 @@ export default function ResultCharacter({ result }: DataProps) {
     }
 
     return (
-        <div>
-            <div>
+        <div className={styles.relate_character_wrap}>
+            <div className={styles.relate_character}>
                 <p>잘 맞는 캐릭터</p>
-                <MainCharacter result={compatible} width={69} height={100} showMainDes={false}/>
+                <MainCharacter result={compatible} width={69} height={100} isInsideRC = {'isInsideRC'} showMainDes={false}/>
             </div>
-            <div>
+            <div className={styles.relate_character}>
                 <p>상극인 캐릭터</p>
-                <MainCharacter result={incompatible} width={69} height={100} showMainDes={false}/>
+                <MainCharacter result={incompatible} width={69} height={100} isInsideRC = {'isInsideRC'} showMainDes={false}/>
             </div>
         </div>
     )

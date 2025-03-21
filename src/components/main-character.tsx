@@ -8,11 +8,12 @@ interface MainCharacterProps {
     width : number;
     height: number;
     showMainDes?:  boolean;
+    isInsideRC?: string;
 }
 
-export default function MainCharacter({result, width, height, showMainDes}:MainCharacterProps) {
+export default function MainCharacter({result, width, height, showMainDes, isInsideRC}:MainCharacterProps) {
     return (
-        <div className={styles.character_info_wrap}>
+        <div className={`${styles.character_info_wrap} ${isInsideRC ? styles[isInsideRC] : ""}`}>
             <div className={styles.character_info_title}>
                 <p className={styles.name}>{result.representative.name}</p>
                 <p className={styles.movie}>{result.representative.movie}</p>

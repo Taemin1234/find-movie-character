@@ -1,0 +1,8 @@
+.relate_character_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.relate_character {
+    width: 50%;
+}
