@@ -10,7 +10,7 @@ export default function ResultCharacter({ result }: DataProps) {
                 <ul className={styles.des_list}>
                     {result.representative.detailedDescription.map((el, i) => {
                         return (
-                            <li key={i}>
+                            <li key={i} className={styles.list_first}>
                                 <p className={styles.bul_title} dangerouslySetInnerHTML={{ __html: el.title }}></p>
                                 <ul className={styles.txt_bul1}>
                                     <li>
@@ -26,7 +26,7 @@ export default function ResultCharacter({ result }: DataProps) {
                 </ul>
             </div>
             <div className={styles.keyword}>
-                <p>키워드</p>
+                <p className={styles.keyword_title}>키워드</p>
                 <div className={styles.keyword_wrap}>
                     {result.representative.keywords.map((el, i) => {
                         return (

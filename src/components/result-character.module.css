@@ -1,21 +1,31 @@
 .result_character_wrap>div:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+.des_character .des_list .list_first {
+    background-color: #dbeafe;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .des_character .des_list li:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .des_character .des_list li .bul_title {
     font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #fff;
+    word-break: keep-all;
 }
 
 .des_character .txt_bul1 {
+    margin-top: 10px;
     text-align: left;
 }
 
 .des_character .txt_bul1 li:not(:first-child) {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .des_character .txt_bul1 li {
@@ -31,6 +41,12 @@
     background-color: #0f0f0f;
     left: 0;
     top: 10px;
+}
+
+.keyword_title {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'gmarket';
 }
 
 .keyword_wrap {
@@ -53,13 +69,9 @@
 }
 
 .other_character .title {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     font-family: 'gmarket';
-}
-
-.other_character ul {
-    margin-top: 15px;
 }
 
 .other_character ul li:not(:first-child) {
