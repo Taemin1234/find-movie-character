@@ -1,4 +1,5 @@
 .character_info_wrap {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,6 +7,17 @@
     gap: 10px;
 
     margin-top: 10px;
+}
+.character_info_wrap:not(.isInsideRC):before {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: -0;
+    transform: rotate(-45deg);
+    width: 120px;
+    height: 40px;
+    background-image: url('/images/film.png');
+    background-size: contain;
 }
 
 .character_info_title p {
