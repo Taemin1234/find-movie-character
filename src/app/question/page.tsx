@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css"
 import { useFetchQuestion } from "@/hooks/useFetchQuestion"
 import QuestionBox from "@/components/question-box";
+import Loading from "@/components/loading"
 
 export default function QuestionPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,7 +61,7 @@ export default function QuestionPage() {
           onAnswerClick={(selectedAnswer) => handleAnswer(selectedAnswer)}
         />
       ) : (
-        <p className={styles.loading_data}>데이터 로딩 중...</p>
+        <Loading/> 
       )}
     </div>
   );

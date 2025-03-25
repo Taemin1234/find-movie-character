@@ -1,6 +1,7 @@
 .btn {
+    width: 100%;
     font-size: 18px;
-    padding: 18px 48px;
+    padding: 20px;
     margin-top: 20px;
     font-weight: 500;
     background-color: #1f2937;
@@ -24,4 +25,39 @@
 
 .btn.btn-answer+.btn.btn-answer {
     margin-top: 20px;
+}
+.btn.btn-restart {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  position: relative;
+}
+
+.btn.btn-share {
+    aspect-ratio: 1/0.25;
+    color: #fff;
+    background: #212121;
+    background-size: cover;
+    background-blend-mode: overlay;
+    border-radius: 0.5em;
+    outline: 0.1em solid #353535;
+    border: 0;
+    box-shadow: 0 0 1em 0.45em rgba(0, 0, 0, 0.1);
+    background: #212121;
+    outline: 0;
+    position: relative;
+    padding: 20px 10px 20px 30px;
+}
+.btn.btn-share:before {
+    position: absolute;
+    content: '';
+    background-image: url('/images/share.png');
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: invert(1);
 }

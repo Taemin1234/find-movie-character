@@ -7,6 +7,7 @@ import { useData } from '../../context/URLContext'
 import ResultCharacter from '@/components/result-character'
 import RelateCharacter from '@/components/relate-character'
 import Button from '@/components/button'
+import Loading from "@/components/loading"
 
 export default function Result() {
     const searchParams = useSearchParams();
@@ -14,9 +15,10 @@ export default function Result() {
     const resultArr = useFetchResult();
     const router = useRouter();
     const { data } = useData();
+    
 
     if (!resultArr || !res || !(res in resultArr)) {
-        return <div>잘못된 요청입니다.</div>;
+        return <Loading/> ;
     }
 
     const result = resultArr[res]
@@ -41,8 +43,10 @@ export default function Result() {
         <div className={styles.result}>
             <ResultCharacter result={result} />
             <RelateCharacter result={result} />
-            <Button content={'다시 하기'} onClick={backMain} />
-            <Button content={'공유 하기'} onClick={copyURL} />
+            <div className={styles.button_wrap}>
+                <Button content={'다시 하기'} type={'btn-restart'} onClick={backMain} /> 
+                <Button content={'공유 하기'} type={'btn-share'} onClick={copyURL} />  
+            </div>
         </div>
     )
 } 
