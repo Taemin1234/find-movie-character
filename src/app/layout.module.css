@@ -18,7 +18,7 @@
 }
 
 .header p {
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     word-break: keep-all
 }
@@ -27,3 +27,4 @@
     padding: 0 20px;
     padding-bottom: 100px;
 }
+
