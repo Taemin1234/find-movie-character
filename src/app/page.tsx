@@ -1,5 +1,6 @@
 "use client";
 
+import Script from 'next/script';
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -22,6 +23,13 @@ export default function Home() {
 
   return (
     <>
+     <Script
+        id="adsense-script"
+        strategy="afterInteractive"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7637419193755235"
+        crossOrigin="anonymous"
+      />
       <div className={styles.main_wrap}>
         <p className={styles.sub_title}>나와 어울리는 영화 캐릭터는 누구일까??</p>
         <Image className={styles.main_img} width={300} height={300} src={shilhouette} alt="메인 실루엣 이미지" />
