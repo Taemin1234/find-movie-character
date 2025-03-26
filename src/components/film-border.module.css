@@ -1,0 +1,18 @@
+.film_wrap {
+    --hole-size: 18px;
+    --gap: 18px;
+    --hole-color: #fff;
+    --film-bg: #000;
+    --content-bg: #fff;
+
+    position: relative;
+    background: var(--film-bg);
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.film {
+    background: var(--content-bg);
+    height: 100%;
+    padding: 20px;
+}

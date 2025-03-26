@@ -1,45 +1,12 @@
 .result {
-    padding-top: 30px;
     background-color: #fff;
-}
-.result > .result_wrap {
-    --hole-size: 18px;
-    --gap: 18px;
-    --hole-color: #fff;
-    --film-bg: #000;
-    --content-bg: #fff;
-
-    position: relative;
-    background: var(--film-bg);
     padding-bottom: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
 }
-.result > .result_wrap:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: var(--hole-size);
-    background-image: repeating-linear-gradient(
-        to right,
-        var(--hole-color),
-        var(--hole-color) var(--gap),
-        transparent var(--gap),
-        transparent calc(var(--gap) + var(--hole-size))
-    );
-    z-index: 2;
-    left: 0;
-    bottom: 9px;
-    background-size: calc(var(--gap) + var(--hole-size)) 100%;
-}
-.result > .result_wrap > div {
-    background: var(--content-bg);
-    height: 100%;
-    padding: 20px;
-}
+
 .button_wrap {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-top: 30px;
+
+    padding: 0 20px;
 }

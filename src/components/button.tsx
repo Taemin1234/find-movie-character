@@ -6,9 +6,11 @@ type ButtonProps = {
     onClick?: () => void;
 };
 
-const Button = ({content, type, onClick}: ButtonProps) => {
+const Button = ({ content, type, onClick }: ButtonProps) => {
     return (
-        <button className={`${styles.btn} ${type ? styles[type] : ""}`} onClick={onClick}>{content}</button>
+        <button className={`${styles.btn} ${type ? styles[type] : ""}`} onClick={onClick}>
+            <p>{content}</p>
+        </button>
     )
 }
 

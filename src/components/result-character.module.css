@@ -1,7 +1,3 @@
-.result_character_wrap>div:not(:first-child) {
-    padding-top: 30px;
-}
-
 .des_character .des_list .list_first {
     background-color: #dbeafe;
     padding: 10px;

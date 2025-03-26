@@ -1,5 +1,4 @@
 .character_info_wrap {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -7,17 +6,6 @@
     gap: 10px;
 
     padding-top: 10px;
-}
-.character_info_wrap:not(.isInsideRC):before {
-    position: absolute;
-    content: '';
-    top: 5px;
-    left: -5px;
-    transform: rotate(-45deg);
-    width: 120px;
-    height: 40px;
-    background-image: url('/images/film.png');
-    background-size: contain;
 }
 
 .character_info_title p {
@@ -35,12 +23,18 @@
     font-size: 18px;
 }
 
+.char_img {
+    margin-top: 10px;
+}
+
 .character_info_wrap .des {
     font-size: 18px;
+    margin-top: 10px;
 }
 
 .isInsideRC .name {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .isInsideRC .movie {

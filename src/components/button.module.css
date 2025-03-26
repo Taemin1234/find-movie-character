@@ -26,12 +26,13 @@
 .btn.btn-answer+.btn.btn-answer {
     margin-top: 20px;
 }
+
 .btn.btn-restart {
-  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
-  border: 1px solid #444;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
-  position: relative;
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    border: 1px solid #444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    position: relative;
 }
 
 .btn.btn-share {
@@ -49,13 +50,14 @@
     position: relative;
     padding: 20px 10px 20px 30px;
 }
+
 .btn.btn-share:before {
     position: absolute;
     content: '';
     background-image: url('/images/share.png');
     background-size: cover;
-    width: 28px;
-    height: 28px;
+    width: 16px;
+    height: 16px;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
