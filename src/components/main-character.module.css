@@ -6,7 +6,7 @@
     align-items: center;
     gap: 10px;
 
-    margin-top: 10px;
+    padding-top: 10px;
 }
 .character_info_wrap:not(.isInsideRC):before {
     position: absolute;

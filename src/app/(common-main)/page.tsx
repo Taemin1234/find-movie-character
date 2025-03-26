@@ -4,10 +4,10 @@ import Script from 'next/script';
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { useData } from '../context/URLContext'
+import { useData } from '@/context/URLContext'
 import Image from 'next/image';
 import shilhouette from '/public/images/silhouette.webp'
-import Button from '../components/button'
+import Button from '@/components/button'
 
 export default function Home() {
   const { setData } = useData()

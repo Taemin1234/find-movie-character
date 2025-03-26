@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import styles from './layout.module.css'
 import { URLProvider } from '../context/URLContext'
 
 export const metadata: Metadata = {
@@ -22,12 +21,7 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <URLProvider>
-          <div className={styles.container}>
-            <header className={styles.header}>
-              <p>🎞️나와 맞는 영화 캐릭터</p>
-            </header>
-            <main className={styles.main}>{children}</main>
-          </div>
+          {children}
         </URLProvider>
       </body>
     </html>

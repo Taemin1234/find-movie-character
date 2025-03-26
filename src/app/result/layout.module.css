@@ -1,0 +1,57 @@
+.result_container {
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #f7f8fa;
+    text-align: center;
+    box-shadow: -4px 0 8px -2px rgba(0, 0, 0, 0.2), 4px 0 8px -2px rgba(0, 0, 0, 0.2);
+}
+.result_main {
+  --hole-size: 18px;
+  --gap: 18px;
+  --hole-color: #fff;
+  --film-bg: #000;
+  --content-bg: rgba(255, 255, 255, 0.05);
+  --border-radius: 12px;
+
+  position: relative;
+  background: var(--film-bg);
+  border-radius: var(--border-radius);
+  padding: 20px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.result_content {
+    /* background: var(--content-bg); */
+    /* backdrop-filter: blur(2px) brightness(0.9); */
+    /* border-radius: 4px; */
+    height: 100%;
+    /* box-shadow: inset 0 0 10px rgba(0,0,0,0.5); */
+}
+.result_main::before,
+.result_main::after {
+    content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: var(--hole-size);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent var(--gap),
+    var(--hole-color) var(--gap),
+    var(--hole-color) calc(var(--gap) + var(--hole-size))
+  );
+  z-index: 2;
+  background-size: calc(var(--gap) + var(--hole-size)) 100%;
+}
+.result_main::before {
+  left: 9px;
+}
+
+.result_main::after {
+  right: 9px;
+}

@@ -1,5 +1,5 @@
 .result_character_wrap>div:not(:first-child) {
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .des_character .des_list .list_first {

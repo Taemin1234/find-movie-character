@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams, useRouter } from "next/navigation"
-import styles from './page.module.css'
+import styles from './ResultClient.module.css'
 import { useFetchResult } from "@/hooks/useFetchResult"
 import { useData } from '../../context/URLContext'
 import ResultCharacter from '@/components/result-character'
@@ -41,8 +41,12 @@ export default function ResultClient() {
 
     return (
         <div className={styles.result}>
-            <ResultCharacter result={result} />
-            <RelateCharacter result={result} />
+            <div className={styles.result_wrap}>
+                <ResultCharacter result={result} />
+            </div>
+            <div className={styles.result_wrap}>
+                <RelateCharacter result={result} />
+            </div>
             <div className={styles.button_wrap}>
                 <Button content={'다시 하기'} type={'btn-restart'} onClick={backMain} /> 
                 <Button content={'공유 하기'} type={'btn-share'} onClick={copyURL} />  
