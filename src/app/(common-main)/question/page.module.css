@@ -6,6 +6,10 @@
     font-size: 32px;
 }
 
+.question .index {
+    margin-top: 10px;
+}
+
 .loading_data {
     font-size: 32px;
     font-weight: bold;

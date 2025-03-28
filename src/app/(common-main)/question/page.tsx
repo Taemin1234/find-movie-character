@@ -55,6 +55,7 @@ export default function QuestionPage() {
   return (
     <div className={styles.question}>
       <h1>Question.{currentIndex + 1}</h1>
+      <p className={styles.index}>{currentIndex + 1} / 12</p>
       {questions.length > 0 ? (
         <QuestionBox
           questionData={questions[currentIndex]}
