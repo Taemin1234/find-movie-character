@@ -13,10 +13,8 @@ export default function QuestionPage() {
   const router = useRouter();
   const questions = useFetchQuestion()
 
-
   const handleAnswer = (answer: string) => {
-    const nextAnswers = [...answers, answer];
-    setAnswers(nextAnswers);
+    setAnswers((prev) => [...prev, answer]);
 
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1);
