@@ -13,7 +13,6 @@ export default function QuestionPage() {
   const router = useRouter();
   const questions = useFetchQuestion()
 
-
   const handleAnswer = (answer: string) => {
     setAnswers((prev) => [...prev, answer]);
 
