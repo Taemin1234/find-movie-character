@@ -15,7 +15,8 @@ export default function QuestionPage() {
 
 
   const handleAnswer = (answer: string) => {
-    setAnswers((prev) => [...prev, answer]);
+    const nextAnswers = [...answers, answer];
+    setAnswers(nextAnswers);
 
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1);
